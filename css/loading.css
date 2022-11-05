@@ -1,0 +1,8 @@
+#loading_icon{
+   animation:rotate 1.5s infinite ;
+}
+
+@keyframes rotate {
+   from{transform : rotate(0deg)}
+   to{transform : rotate(360deg)}
+}

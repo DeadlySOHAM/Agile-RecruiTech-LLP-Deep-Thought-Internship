@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <!-- font style -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet">
+   <title>Deep Thoughts</title>
+
+   <!-- material icons -->
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,1,200" />
+
+   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="css/loading.css">
+   <link rel="stylesheet" href="css/title_bar.css">
+   <link rel="stylesheet" href="css/journey_board.css">
+   <link rel="stylesheet" href="css/story_board.css">
+</head>
+
+<body>
+
+   <!-- Title Bar -->
+   <div class="title_bar">
+      <img class="deep_thought_logo" src="https://deepthought.education/assets/images/logo/logo.svg" alt="Deep Thought">
+      <div class="group">
+         <span class="material-symbols-sharp title_icon"> house </span>
+         <span class="material-symbols-sharp title_icon"> notifications </span>
+         <span class="material-symbols-sharp title_icon"> construction </span>
+         <img class="title_icon" src="assets/Images/Soham.jpg" alt="Profile Picture">
+         <span class="material-symbols-sharp title_icon menu"> more_vert </span>
+      </div>
+   </div>
+
+
+   <!-- Journey Board -->
+   <div id="jb" class="journey_board journey_board_inactive">
+      <h1>
+         <span class="journey_board_header">Journey Board</span>
+         <span class="material-symbols-sharp title_icon" onclick="journey_board_toggle()"> menu </span>
+      </h1>
+      <div class="task">
+         <ol type="1" id="journey_board">
+            <!--
+            <li>
+               <h2>demo task</h2>
+               <ul type="disc">
+                  <li>
+                     <h3>task heading 1</h3>
+                  </li>
+                  <li>
+                     <h3>task heading 2</h3>
+                  </li>
+                  <li>
+                     <h3>task heading 3</h3>
+                  </li>
+                  <li>
+                     <h3>task heading 4</h3>
+                  </li>
+                  <li>
+                     <h3>task heading 6</h3>
+                  </li>
+               </ul>
+            </li>
+            -->
+         </ol>
+      </div>
+      <div class="journey_board_indicator">
+         1
+      </div>
+   </div>
+
+
+
+   <!-- Story Board -->
+   <div class="story_board_container">
+      <div class="story_board">
+         <h1>You are taking challenges of new project</h1>
+         <h6 id="task_title">loading ...</h6>
+         <div class="task_cards" id="task_cards">
+
+            <!-- 
+
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 1</h1>
+               <section class="display_asset_reflection">
+                  Lorem ipsum is a placeholder text commonly used to demonstrate the
+                  visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used
+                  as a placeholder before final copy is available.
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 2</h1>
+               <section class="task_input_tb">
+                  <div class="thread_header">
+                     <span class="material-symbols-sharp arrow_icon"> expand_less </span>
+                     Thread A
+                  </div>
+                  <div class="sub_thread_container">
+                     <div class="textfield_container">
+                        <label>Sub Thread 1</label>
+                        <textarea placeholder="Enter Text Here"></textarea>
+                     </div>
+                     <div class="textfield_container">
+                        <label>Sub Interpretation 1</label>
+                        <textarea placeholder="Enter Text Here"></textarea>
+                     </div>
+                  </div>
+                  <div class="select_options_container">
+                     <span class="material-symbols-sharp icons">lightbulb</span>
+                     <span class="material-symbols-sharp icons">comment</span>
+                     <select>
+                        <option value="" selected>Select Category</option>
+                        <option value="Category 1">Category 1</option>
+                        <option value="Category 1">Category 1</option>
+                        <option value="Category 1">Category 1</option>
+                        <option value="Category 1">Category 1</option>
+                     </select>
+                     <select>
+                        <option value="" selected>Select Process</option>
+                        <option value="Process 1">Process 1</option>
+                        <option value="Process 1">Process 1</option>
+                        <option value="Process 1">Process 1</option>
+                        <option value="Process 1">Process 1</option>
+                     </select>
+                  </div>
+                  <button>+ Sub Thread</button>
+                  <div class="sub_thread_container">
+                     <div class="textfield_container sub_thread_summary">
+                        <label>Sub Thread 1</label>
+                        <textarea placeholder="Enter Text Here"></textarea>
+                     </div>
+                  </div>
+                  <div class="select_options_container select_emotion_container">
+                     <div>
+                        <span class="material-symbols-sharp icons">link</span>
+                        <span>Thread Credit</span>
+                        <span class="material-symbols-sharp icons link_icon">drive_file_rename_outline</span>
+                     </div>
+                     <select>
+                        <option value="" selected>Select Emotion</option>
+                        <option value="Emotion 1">Emotion 1</option>
+                        <option value="Emotion 1">Emotion 1</option>
+                        <option value="Emotion 1">Emotion 1</option>
+                        <option value="Emotion 1">Emotion 1</option>
+                     </select>
+                  </div>
+                  <div class="save_icon">
+                     <span class="material-symbols-sharp icons">save</span>
+                  </div>
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 3</h1>
+               <section class="task_input_reflection">
+                  Reflect as per given guidelines
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 4</h1>
+               <section class="task_asset_other_docs">
+                  <iframe loading="lazy" src="https://drive.google.com/file/d/1Pxw83bTKE3KkOyYnwm1u6DSVjntSrNTp/preview"
+                     frameborder="0"></iframe>
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 5</h1>
+               <section class="task_asset_other_image">
+                  <img src="https://media.giphy.com/media/IzjhI7ggjDlEnMxZMu/giphy.gif">
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 7</h1>
+               <section class="task_input_tb task_input_eb">
+                  <div class="thread_header introduction">
+                     <span class="material-symbols-sharp arrow_icon"> expand_less </span>
+                     Introduction
+                  </div>
+                  <div class="sub_thread_container enter_introduction">
+                     <div class="textfield_container">
+                        <textarea placeholder="Enter Introduction"></textarea>
+                     </div>
+                  </div>
+                  <div class="thread_header">
+                     <span class="material-symbols-sharp arrow_icon"> expand_less </span>
+                     Thread A
+                  </div>
+                  <div class="sub_thread_container">
+                     <div class="textfield_container">
+                        <label>Example 1</label>
+                        <textarea placeholder="Enter Text Here"></textarea>
+                     </div>
+                     <div class="add_example_button_container">
+                        <button>+ Example</button>
+                     </div>
+                     <div class="textfield_container">
+                        <label>Argument for Thread A</label>
+                        <textarea placeholder="Enter Text Here"></textarea>
+                     </div>
+                     <div class="add_new_thread_button_container">
+                        <button>+ Add new Thread</button>
+                     </div>
+                  </div>
+                  <div class="thread_header introduction">
+                     <span class="material-symbols-sharp arrow_icon"> expand_less </span>
+                     Conclusion
+                  </div>
+                  <div class="sub_thread_container enter_introduction">
+                     <div class="textfield_container">
+                        <textarea placeholder="Enter Conclusion"></textarea>
+                     </div>
+                  </div>
+                  <div class="save_icon">
+                     <span class="material-symbols-sharp icons">save</span>
+                  </div>
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 8</h1>
+               <section class="task_asset_other_url">
+                  <iframe loading="lazy" src="https://drive.google.com/file/d/1dBBYQsz2yt3vc4YMkRmVC3nuTBbq2GON/preview"
+                     frameborder="0"></iframe>
+                  <div class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                     printer took a galley of type</div>
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            
+            <section class="task_card">
+               <h1 class="task_heading">Task heading 9</h1>
+               <section class="task_asset_other_video">
+                  <iframe loading="lazy" src="https://www.youtube.com/embed/s8H0Sx7jy7c"
+                     frameborder="0"></iframe>
+               </section>
+               <div class="expand_icon"><span class="material-symbols-sharp">keyboard_arrow_down</span></div>
+            </section>
+
+            -->
+            <div id="loader"><span id="loading_icon" class="material-symbols-sharp"> hourglass_top </span></div>
+
+         </div>
+      </div>
+   </div>
+
+
+   <div class="button_next_story"><button>Next</button></div>
+
+
+   <script src="js/journey_board.js"></script>
+   <script src="js/dynamic_renderer.js"></script>
+
+   <script src="js/journey_board_view/JourneyBoard.js"></script>
+
+
+   <script src="js/task_views/TaskCard.js"></script>
+
+   <script src="js/task_views/DisplayAssetImage.js"></script>
+   <script src="js/task_views/DisplayAssetDocs.js"></script>
+   <script src="js/task_views/DisplayAssetReflection.js"></script>
+   <script src="js/task_views/DisplayAssetVideo.js"></script>
+   <script src="js/task_views/DisplayAssetUrl.js"></script>
+   <script src="js/task_views/Input_eb.js"></script>
+   <script src="js/task_views/Input_tb.js"></script>
+   <script src="js/task_views/Input_reflection.js"></script>
+   <script src="js/task_views/Input_article.js"></script>
+</body>
+
+</html>

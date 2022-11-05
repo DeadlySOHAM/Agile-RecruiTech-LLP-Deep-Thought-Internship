@@ -1,0 +1,58 @@
+:root{
+   --paddingValue:0.25rem 0.5rem;
+   --marginValue:0.25rem 0.5rem;
+
+   --highPaddingValue : 1rem 0.5rem;
+   --highMarginValue : 1rem 0.5rem;
+
+   --generalBoxShadow : 0rem 0rem 0.25rem 0.01rem #000000 ;
+   --cardBoxShadow :  0rem 0rem 0.5rem 0.25rem #e0e0e0;
+
+
+   --titleBarColor:#F0F0F0;
+   --titleBarIconBackgroundColor:#3683F0;
+   --titleBarIconColor:#ffffff;
+
+   --journeyBoardHeaderBackgroundColor:rgba(0, 0, 0, 1);
+   --journeyBoardHeaderTextColor:#ffffff;
+
+   --storyBoardMainHeaderBackgroundColor:#0029FF;
+   --taskHeaderBackgroundColor:var(--journeyBoardHeaderBackgroundColor);
+   --taskHeaderTextColor:var(--journeyBoardHeaderTextColor);
+}
+
+*{
+   margin : 0 ;
+   padding : 0 ;
+   box-sizing: border-box ;
+
+   /* Disabling selection */
+   -webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+   
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Roboto', sans-serif;
+}
+
+::-webkit-scrollbar
+{
+   width:0;
+}
+
+html{
+   scroll-behavior : smooth ;
+   scrollbar-width: thin;
+}
+
+
+button{
+   padding:var(--highPaddingValue);
+   background-color: var(--storyBoardMainHeaderBackgroundColor);
+   color: var(--titleBarIconColor);
+   border:none;
+   border-radius: 5px ;
+}

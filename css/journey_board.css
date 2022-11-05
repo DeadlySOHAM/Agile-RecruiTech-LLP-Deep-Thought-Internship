@@ -1,0 +1,120 @@
+.journey_board{
+   width:250px;
+   min-width:fit-content ;
+   height: 75% ;
+   position:fixed;
+   left: 0;
+   margin-top: 7vh;
+   box-shadow: var(--generalBoxShadow);
+   border-top-right-radius: 0.5rem ;
+
+   display: inline-block;
+   background-color: #ffffff;
+
+   overflow-y: scroll ;
+   scrollbar-width: none;
+}
+
+.journey_board h1{
+   width:100% ;
+   padding: var(--paddingValue);
+   background-color: var(--journeyBoardHeaderBackgroundColor);
+   color:var(--journeyBoardHeaderTextColor);
+
+   display: flex ;
+   flex-direction: row ;
+   align-items: center ;
+   justify-content: space-between;
+
+   border-top-right-radius: 0.5rem ;
+   font-size: 1.5rem ;
+
+   position: sticky;
+   top: 0;
+}
+
+
+.journey_board .task{
+   display: flex ;
+   flex-direction: column ;
+   align-items: center ;
+   justify-content: space-evenly;
+}
+
+.journey_board ol{
+   width:80%;
+}
+
+
+.journey_board ol li {
+   list-style-position: inside;
+   font-weight: bold;
+}
+
+
+.journey_board ul li {
+   list-style-position: inside; 
+   text-align: center ;
+}
+
+.journey_board ul li a{
+   text-decoration: none ;
+   color:#000000;
+}
+
+.journey_board ul li:last-child h3{
+   border:none;
+}
+
+
+.journey_board h2{
+   width:75%;
+   display: inline-block;
+   margin:var(--marginValue);
+   border-bottom:0.0125rem solid grey ;
+   padding-bottom: 1rem ;
+}
+
+
+.journey_board h3 {
+   width:fit-content;
+   margin:var(--marginValue);
+   padding-bottom: 1rem ;
+   border-bottom:0.0125rem solid grey ;
+   display: inline-block;
+   font-weight: normal ;
+   text-align: right ;
+}
+
+
+
+
+
+.journey_board .journey_board_indicator{
+   display: none ;
+}
+
+
+
+.journey_board_inactive{
+   width:fit-content;
+   height:75%;
+}
+
+.journey_board_inactive .task{
+   display: none;
+}
+
+.journey_board_inactive .journey_board_header{
+   display: none;
+}
+
+
+.journey_board_inactive .journey_board_indicator{
+   display: block;
+   margin :1rem;
+   padding:0.75rem;
+   border: 0.125rem solid var(--titleBarIconBackgroundColor);
+   border-radius: 25%;
+   color:var(--titleBarIconBackgroundColor);
+}
