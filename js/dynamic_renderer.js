@@ -44,7 +44,7 @@ const menu = {
 
 
 
-fetch("https://deadlysoham.github.io/project.json")
+fetch("https://deadlysoham.github.io/Agile-RecruiTech-LLP-Deep-Thought-Internship/project.json")
    .then(response => response.json())
    .then(result => render(result))
    .catch(error => console.log('error', error));
