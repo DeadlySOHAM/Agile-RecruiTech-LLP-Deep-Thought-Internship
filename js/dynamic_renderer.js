@@ -44,7 +44,7 @@ const menu = {
 
 
 
-fetch("https://dev.deepthought.education/assets/uploads/files/others/project.json")
+fetch("http://127.0.0.1:5500/project.json")
    .then(response => response.json())
    .then(result => render(result))
    .catch(error => console.log('error', error));
